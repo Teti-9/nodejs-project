@@ -1,0 +1,31 @@
+name: nodejs-projects
+
+services:
+  database:
+    image: postgres:14
+    container_name: database
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASS}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgresql/data:/var/lib/postgresql/data
+
+  app:
+    build: .
+    container_name: app
+    restart: always
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+      JWT_SECRET: ${JWT_SECRET}
+      PORT: ${PORT}
+      NODE_ENV: development
+    ports:
+      - "8000:8000"
+    depends_on:
+      - database
+    volumes:
+      - .:/app

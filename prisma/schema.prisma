@@ -1,0 +1,37 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Exercicio {
+  id  Int @id @default(autoincrement())
+  nome  String
+  musculo  String
+  musculo_residual  String?
+  series  Int
+  carga  Int
+  carga_anterior  Int?
+  repeticoes  Int
+  repeticoes_anterior  Int?
+  info  String
+  data  DateTime?  @default(now())
+  data_anterior  DateTime?
+  userId  Int
+  user  User  @relation(fields: [userId], references: [id])
+}
+
+model User {
+  id  Int @id @default(autoincrement())
+  email String @unique
+  senha String
+  exercicios Exercicio[]
+}

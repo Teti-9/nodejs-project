@@ -1,0 +1,7 @@
+### GET
+GET http://localhost:8000/api/volume
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzUxMzE1NjE0LCJleHAiOjE3NTE0MDIwMTR9.3MR7K3zzli-g8yG9M8PAKa3-2twOvp9AXFom_hu6jDE
+
+### GET UNIQUE
+GET http://localhost:8000/api/volume/peito
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzUxMzE1MzY3LCJleHAiOjE3NTE0MDE3Njd9.uKQKE0ipY3qGKhD9WIBzBuHrvmV8qqpe7JDvLHGSPmM

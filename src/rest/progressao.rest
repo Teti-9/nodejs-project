@@ -1,0 +1,2 @@
+GET http://localhost:8000/api/progressao/supino inclinado
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzUxMzE1NjE0LCJleHAiOjE3NTE0MDIwMTR9.3MR7K3zzli-g8yG9M8PAKa3-2twOvp9AXFom_hu6jDE

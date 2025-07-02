@@ -1,0 +1,17 @@
+### POST
+POST http://localhost:8000/api/registrar
+Content-Type: application/json
+
+{
+"email": "teste2@gmail.com",
+"senha": "teti"
+}
+
+### POST
+POST http://localhost:8000/api/logar
+Content-Type: application/json
+
+{
+"email": "teste2@gmail.com",
+"senha": "teti"
+}

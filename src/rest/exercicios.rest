@@ -1,0 +1,38 @@
+### GET
+GET http://localhost:8000/api/exercicios
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzUxMzE1NjE0LCJleHAiOjE3NTE0MDIwMTR9.3MR7K3zzli-g8yG9M8PAKa3-2twOvp9AXFom_hu6jDE
+### GET UNIQUE
+GET http://localhost:8000/api/exercicios/rosca
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzUxMzE1MzY3LCJleHAiOjE3NTE0MDE3Njd9.uKQKE0ipY3qGKhD9WIBzBuHrvmV8qqpe7JDvLHGSPmM
+
+### POST
+POST http://localhost:8000/api/exercicios
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzUxMzE1NjE0LCJleHAiOjE3NTE0MDIwMTR9.3MR7K3zzli-g8yG9M8PAKa3-2twOvp9AXFom_hu6jDE
+Content-Type: application/json
+
+{
+"nome": "Supino inclinado",
+"musculo": "peito",
+"series": 2,
+"carga": 20,
+"repeticoes": 8,
+"info": "Smith"
+}
+
+### PUT
+PUT http://localhost:8000/api/exercicios/3
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzUxMzE1MzY3LCJleHAiOjE3NTE0MDE3Njd9.uKQKE0ipY3qGKhD9WIBzBuHrvmV8qqpe7JDvLHGSPmM
+Content-Type: application/json
+
+{
+"nome": "supino reto",
+"musculo": "peito",
+"series": 2,
+"carga": 20,
+"repeticoes": 9,
+"info": "Smith"
+}
+
+### DELETE
+DELETE http://localhost:8000/api/exercicios/3
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzUxMzE1MzY3LCJleHAiOjE3NTE0MDE3Njd9.uKQKE0ipY3qGKhD9WIBzBuHrvmV8qqpe7JDvLHGSPmM
