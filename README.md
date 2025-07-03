@@ -56,24 +56,37 @@ git clone https://github.com/Teti-9/nodejs-project.git
 cd nodejs-project
 ```
 
-2. **Gere o client do Prisma**:
+2. **Crie um arquivo .env na raíz do projeto com as seguintes variáveis**:
+
+```bash
+PORT = 8000
+JWT_SECRET = 'stringqualquer'
+POSTGRES_DB='postgres'
+POSTGRES_USER='postgres'
+POSTGRES_PASS='postgres'
+DATABASE_URL = 'postgresql://postgres:postgres@database:5432/postgres'
+```
+
+3. **Gere o client do Prisma**:
 
 `npx prisma generate`
 
-3. **Construa a imagem do Docker**:
+4. **Construa a imagem do Docker**:
 
 `docker compose build`
 
-4. **Aplique as migrations**:
+5. **Aplique as migrations**:
 
 `docker compose run app npx prisma migrate dev --name init`
 
-5. **Suba os containers do Docker**:
+- Execute esse comando novamente caso receba um erro sobre a database não estar rodando.
+
+6. **Suba os containers do Docker**:
 
 `docker compose up`
 
-6. **Pode se utilizar de uma ferramente como Dbeaver para acessar a database postgres diretamente caso necessário!**:
+7. **Pode se utilizar de uma ferramente como Dbeaver para acessar a database postgres diretamente caso necessário!**:
 
-7. **Acesse o APP e suas rotas**:
+8. **Acesse o APP e suas rotas**:
 
-Dentro da pasta rest, os **Arquivos REST** (Extensão VSCODE) possuem todas as rotas prontas para serem testadas, também é possível utilizar algum outro software como postman ou insomnia, por exemplo: `http://localhost:8000/api/registrar`
+Dentro da pasta rest, os **Arquivos .REST** (Extensão VSCODE) possuem todas as rotas prontas para uso, também é possível utilizar algum outro software como postman ou insomnia e testar, por exemplo: `http://localhost:8000/api/registrar`
